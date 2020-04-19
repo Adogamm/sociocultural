@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+
+<style>
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+    margin:0;
+    padding:0;
+}
+
+header {
+    background:#333;
+    color:#eee;
+    width:100%;
+}
+
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 1rem;
+    background-color:#333;
+    color:#fff;
+    display:inline-block;
+    width:100%;
+
+}
+
+.cerrar {
+    display:none;
+}
+
+#sidebar {
+    width:0;
+}
+
+#contenido {
+    margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #sidebar {
+    width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+.sidebar {
+    
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: saddlebrown;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sidebar ul, .sidebar li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.sidebar a:hover{
+    color:#fff;
+    background-color: black;
+
+}
+
+h1 {
+    color:black;
+    font-size:180%;
+    font-weight:normal;
+}
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: saddlebrown;
+    font-size:1rem;   
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span></label>
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="carta1.html">carta1</a></li>
+            <br>
+            <li><a href="carta2.html">carta2</a></li>
+        </ul>
+        
+        
+    </div>
+    <center>
+<meta charset="utf-8">
+    <title>Documento Nuevo</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+     <link href="https://file.myfontastic.com/t5tNwfwUapz4yDzK3B6sfe/icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+   <header class="header">
+      <div class="contenedor">
+       <img src="img/logo.jpg" alt"" title="" width="" class="logo">
+        <span class="icon-menu" id="btn-menu"></span>
+        
+      </div>
+    </header>
+    <div class="banner"> 
+        <img src="img/banner.jpg" alt"" title="" >
+         <div class="contenedor">
+        <h1 class="banner__titulo">Star Café</h1>
+        <p class="banner__txt">Bienvenidos a Nuestro Restaurante</p>
+        </div>
+    </div>
+   
+    <main class="main">
+        
+             <section class="info">
+                 <div class="contenedor">
+          <article class="info__columna">
+            <img src="img/1.jpg" alt="" class="info__img">
+            <h2 class="info__titulo">Título 1</h2>
+            <p class="info__txt"></p>
+          </article>
+          <article class="info__columna">
+            <img src="img/2.jpg" alt="" class="info__img">
+            <h2 class="info__titulo">Título 2</h2>
+            <p class="info__txt"></p>
+          </article>
+          <article class="info__columna">
+            <img src="img/3.jpg" alt="" class="info__img">
+            <h2 class="info__titulo">Título 3</h2>
+            <p class="info__txt"></p>
+          </article>
+            </div>
+          </section>
+                     
+            <section class="platos">
+                <div class="contenedor">
+                <h2 class="platos__titulo">Nuestros Menus</h2>
+                <p class="platos__txt"></p>
+                    <div class="platos__columna">
+                        <img src="img/4.jpg" alt="" class="platos__img">
+                        <h3>Plato 1</h3>
+                    </div>
+                <div class="platos__columna">
+                        <img src="img/5.jpg" alt=""  class="platos__img">
+                        <h3>Plato 2</h3>
+                    </div>
+                <div class="platos__columna">
+                        <img src="img/6.jpg" alt=""  class="platos__img">
+                        <h3>Plato 3</h3>
+                    </div>
+                <div class="platos__columna">
+                        <img src="img/7.jpg" alt=""  class="platos__img">
+                        <h3>Plato 4</h3>
+                    </div>
+            </section>
+            <section class="mapa">
+                  <div class="contenedor">
+    
+                     <h3>DONDE ESTAMOS?</h3>
+                <p>nos ubicamos en tulancingo hidalgo,</p>
+                    
+                </div>
+                 </div>
+            </section> 
+    </main>
+    <footer class="footer">
+        <div class="social">
+            <ul>
+                <li style="color: white;">León Barron Adolfo</li>
+                <li style="color: white;">Rodriguez Velasco Eliazar</li>
+                <li style="color: white;">Proyecto realizado para la clase de socio cultural</li>
+            </ul>
+        </div>
+         
+         </footer>
+          <script src="js/menu.js"></script>
+</body>
+</html>
